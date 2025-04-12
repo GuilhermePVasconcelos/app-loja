@@ -28,31 +28,34 @@ Este é um aplicativo mobile de vitrine e catálogo de produtos desenvolvido em 
 ---
 
 ## 🛠️ Como executar o projeto localmente
-
-### 1. Clone o repositório
+ 1. Clone o repositório
 
 ```bash
 git clone https://github.com/seuusuario/app-loja.git
-´´´
-
+```
 2. Acesse a pasta do projeto
+```bash
 cd app-loja
-
+```
 3. Instale as dependências
+```bash
 npm install
-
+```
 4. Inicie o servidor de desenvolvimento
+```bash
 npx expo start
+```
+5. Abra o projeto no:
 
-Abra o projeto no:
+- Navegador (modo web)
 
-Navegador (modo web)
+- Celular com o app Expo Go
 
-Celular com o app Expo Go
+- Emulador Android/iOS (se configurado)
 
-Emulador Android/iOS (se configurado)
+---
 
-📂 Estrutura do Projeto
+## 📂 Estrutura do Projeto
 📁 app
  ├── (tabs)
  │   ├── index.tsx              # Tela Início
@@ -72,14 +75,20 @@ Emulador Android/iOS (se configurado)
  ├── category.ts                # Tipagem de categoria
  └── product.ts                 # Tipagem de produto
 
-👤 Sobre o Desenvolvedor
+---
+
+## 👤 Sobre o Desenvolvedor
 Guilherme Vasconcelos
 🎓 Estudante de Engenharia de Software
 📧 guilhermewert21@gmail.com
 🔗 github.com/GuilhermePVasconcelos
 
-📌 Status do Projeto
+---
+
+## 📌 Status do Projeto
 ✅ Finalizado e funcional
 
-📜 Licença
+---
+
+## 📜 Licença
 Este projeto foi desenvolvido com fins educacionais. Está aberto para estudo, modificação e uso acadêmico.
