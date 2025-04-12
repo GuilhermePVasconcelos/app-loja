@@ -1,51 +1,85 @@
-# Welcome to your Expo app 👋
+# 🛍️ App Loja — Aplicativo Mobile com React Native + Expo
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este é um aplicativo mobile de vitrine e catálogo de produtos desenvolvido em **React Native com Expo Router**, como parte de um projeto acadêmico. O app simula uma loja virtual com funcionalidades de navegação por categorias, exibição de produtos, visualização de detalhes e tela de apresentação pessoal.
 
-## Get started
+---
 
-1. Install dependencies
+## 📱 Funcionalidades
 
-   ```bash
-   npm install
-   ```
+- ✅ Tela Início com destaques e categorias em horizontal
+- ✅ Listagem de produtos por categoria
+- ✅ Tela de detalhes do produto com imagem, descrição e preço
+- ✅ Navegação com abas (Tabs) e pilha (Stack) utilizando **Expo Router**
+- ✅ Tela "Sobre Mim" com informações do desenvolvedor
+- ✅ Layout responsivo e moderno com componentes reutilizáveis
 
-2. Start the app
+---
 
-   ```bash
-    npx expo start
-   ```
+## 🧠 Tecnologias utilizadas
 
-In the output, you'll find options to open the app in a
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [Expo Router](https://expo.github.io/router/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Expo Vector Icons](https://icons.expo.fyi/)
+- [React Navigation](https://reactnavigation.org/)
+- [VSCode](https://code.visualstudio.com/)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🛠️ Como executar o projeto localmente
 
-## Get a fresh project
-
-When you're ready, run:
+### 1. Clone o repositório
 
 ```bash
-npm run reset-project
-```
+git clone https://github.com/seuusuario/app-loja.git
+´´´
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Acesse a pasta do projeto
+cd app-loja
 
-## Learn more
+3. Instale as dependências
+npm install
 
-To learn more about developing your project with Expo, look at the following resources:
+4. Inicie o servidor de desenvolvimento
+npx expo start
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Abra o projeto no:
 
-## Join the community
+Navegador (modo web)
 
-Join our community of developers creating universal apps.
+Celular com o app Expo Go
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-# app-loja
+Emulador Android/iOS (se configurado)
+
+📂 Estrutura do Projeto
+📁 app
+ ├── (tabs)
+ │   ├── index.tsx              # Tela Início
+ │   ├── categories.tsx         # Tela Categorias
+ │   ├── sobremim.tsx           # Tela Sobre Mim
+ ├── categorias/[id].tsx        # Produtos por categoria
+ ├── produtos/[id].tsx          # Detalhes do produto
+
+📁 components
+ ├── CategoriaCard.tsx           # Componente visual de categorias
+ └── ProdutoCard.tsx             # Componente visual de produtos
+
+📁 data
+ └── index.ts                   # Dados simulados de categorias e produtos
+
+📁 types
+ ├── category.ts                # Tipagem de categoria
+ └── product.ts                 # Tipagem de produto
+
+👤 Sobre o Desenvolvedor
+Guilherme Vasconcelos
+🎓 Estudante de Engenharia de Software
+📧 guilhermewert21@gmail.com
+🔗 github.com/GuilhermePVasconcelos
+
+📌 Status do Projeto
+✅ Finalizado e funcional
+
+📜 Licença
+Este projeto foi desenvolvido com fins educacionais. Está aberto para estudo, modificação e uso acadêmico.

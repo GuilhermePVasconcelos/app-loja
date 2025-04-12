@@ -1,1 +1,5 @@
-export type Category = {};
+export type Category = {
+    id: number;
+    title: string;
+    cover: string
+};
