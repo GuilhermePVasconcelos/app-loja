@@ -31,7 +31,7 @@ Este é um aplicativo mobile de vitrine e catálogo de produtos desenvolvido em 
  1. Clone o repositório
 
 ```bash
-git clone https://github.com/seuusuario/app-loja.git
+git clone https://github.com/GuilhermePVasconcelos/app-loja.git
 ```
 2. Acesse a pasta do projeto
 ```bash
@@ -56,32 +56,39 @@ npx expo start
 ---
 
 ## 📂 Estrutura do Projeto
+
+```plaintext
 📁 app
  ├── (tabs)
- │   ├── index.tsx              # Tela Início
- │   ├── categories.tsx         # Tela Categorias
- │   ├── sobremim.tsx           # Tela Sobre Mim
- ├── categorias/[id].tsx        # Produtos por categoria
- ├── produtos/[id].tsx          # Detalhes do produto
+ │   ├── index.tsx           → Tela Início
+ │   ├── categories.tsx      → Tela Categorias
+ │   └── sobremim.tsx        → Tela Sobre Mim
+ ├── categorias
+ │   └── [id].tsx            → Produtos por categoria
+ └── produtos
+     └── [id].tsx            → Detalhes do produto
 
 📁 components
- ├── CategoriaCard.tsx           # Componente visual de categorias
- └── ProdutoCard.tsx             # Componente visual de produtos
+ ├── CategoryCard.tsx        → Cartão de categoria
+ └── ProductCard.tsx         → Cartão de produto
 
 📁 data
- └── index.ts                   # Dados simulados de categorias e produtos
+ └── index.ts                → Dados simulados
 
 📁 types
- ├── category.ts                # Tipagem de categoria
- └── product.ts                 # Tipagem de produto
+ ├── category.ts             → Tipagem de categoria
+ └── product.ts              → Tipagem de produto
 
 ---
 
 ## 👤 Sobre o Desenvolvedor
-Guilherme Vasconcelos
-🎓 Estudante de Engenharia de Software
-📧 guilhermewert21@gmail.com
-🔗 github.com/GuilhermePVasconcelos
+
+**Guilherme Vasconcelos**  
+🎓 Estudante de Engenharia de Software  
+💡 Apaixonado por tecnologia, mobile e soluções que resolvem problemas reais.
+
+📧 [guilhermewert21@gmail.com](mailto:guilhermewert21@gmail.com)  
+🔗 [GitHub - GuilhermePVasconcelos](https://github.com/GuilhermePVasconcelos)
 
 ---
 
