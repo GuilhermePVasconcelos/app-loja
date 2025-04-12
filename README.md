@@ -78,6 +78,7 @@ npx expo start
 📁 types
  ├── category.ts             → Tipagem de categoria
  └── product.ts              → Tipagem de produto
+```
 
 ---
 
