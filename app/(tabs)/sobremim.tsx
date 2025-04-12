@@ -22,7 +22,7 @@ export default function SobreMimScreen() {
  
     
       <View style={styles.links}>
-        <TouchableOpacity style={styles.linkBtn} onPress={() => Linking.openURL('https://github.com/GPVasconcelos')}>
+        <TouchableOpacity style={styles.linkBtn} onPress={() => Linking.openURL('https://github.com/GuilhermePVasconcelos')}>
           <Feather name="github" size={20} color="#2e86de" />
           <Text style={styles.linkText}>GitHub</Text>
         </TouchableOpacity>
