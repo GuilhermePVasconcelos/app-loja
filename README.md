@@ -61,7 +61,7 @@ npx expo start
 📁 app
  ├── (tabs)
  │   ├── index.tsx           → Tela Início
- │   ├── categories.tsx      → Tela Categorias
+ │   ├── categorias.tsx      → Tela Categorias
  │   └── sobremim.tsx        → Tela Sobre Mim
  ├── categorias
  │   └── [id].tsx            → Produtos por categoria
@@ -69,8 +69,8 @@ npx expo start
      └── [id].tsx            → Detalhes do produto
 
 📁 components
- ├── CategoryCard.tsx        → Cartão de categoria
- └── ProductCard.tsx         → Cartão de produto
+ ├── CategoriaCard.tsx        → Cartão de categoria
+ └── ProdutoCard.tsx          → Cartão de produto
 
 📁 data
  └── index.ts                → Dados simulados
@@ -84,9 +84,8 @@ npx expo start
 
 ## 👤 Sobre o Desenvolvedor
 
-**Guilherme Vasconcelos**  
-🎓 Estudante de Engenharia de Software  
-💡 Apaixonado por tecnologia, mobile e soluções que resolvem problemas reais.
+**👤Guilherme Vasconcelos**  
+🎓 Estudante do 5° Periodo de Engenharia de Software FAG-Toledo  
 
 📧 [guilhermewert21@gmail.com](mailto:guilhermewert21@gmail.com)  
 🔗 [GitHub - GuilhermePVasconcelos](https://github.com/GuilhermePVasconcelos)
