@@ -1,21 +1,24 @@
 import { Tabs } from 'expo-router';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons'; 
 
-
+// Componente responsável pela estrutura de navegação por abas no app
 export default function Layout() {
   return (
     <Tabs>
+      {/* Aba: Início */}
       <Tabs.Screen
-       name="index"
+        name="index" // Corresponde ao arquivo index.tsx em (tabs)
         options={{
-          title: 'Início',
-           tabBarIcon: ({ color, size }) => (
-             <Ionicons name="home-outline" color={color} size={size} />
-           ),
+          title: 'Início', // Título exibido na aba
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home-outline" color={color} size={size} /> // Ícone da aba
+          ),
         }}
       />
+
+      {/* Aba: Categorias */}
       <Tabs.Screen
-        name="categories"
+        name="categories" // Corresponde ao arquivo categories.tsx em (tabs)
         options={{
           title: 'Categorias',
           tabBarIcon: ({ color, size }) => (
@@ -23,8 +26,10 @@ export default function Layout() {
           ),
         }}
       />
+
+      {/* Aba: Sobre Mim */}
       <Tabs.Screen
-        name="sobremim"
+        name="sobremim" // Corresponde ao arquivo sobremim.tsx em (tabs)
         options={{
           title: 'Sobre Mim',
           tabBarIcon: ({ color, size }) => (
@@ -35,4 +40,3 @@ export default function Layout() {
     </Tabs>
   );
 }
- 

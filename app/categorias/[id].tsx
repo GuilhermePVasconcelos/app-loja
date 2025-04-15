@@ -5,45 +5,56 @@ import { data } from '../../data';
 import { Product } from '../../types/product';
 import ProdutoCard from '../components/ProdutoCard';
 
+// Componente principal que renderiza os produtos de uma categoria específica
 export default function CategoriaDetalhe() {
+  // Captura o parâmetro da URL (id da categoria)
   const { id } = useLocalSearchParams();
+
+  // Estado que armazena os produtos filtrados por categoria
   const [produtos, setProdutos] = useState<Product[]>([]);
+
+  // Estado que armazena o nome (título) da categoria
   const [categoriaTitulo, setCategoriaTitulo] = useState<string>('');
 
+  // Hook que executa a lógica assim que o ID mudar
   useEffect(() => {
-    const categoriaId = Number(id);
+    const categoriaId = Number(id); // Converte o parâmetro para número
 
-    // Busca os produtos da categoria
+    // Filtra os produtos com base no ID da categoria
     const filtrar = data.products.filter(
       (product) => product.idCategory === categoriaId
     );
     setProdutos(filtrar);
 
-    // Busca o título da categoria
+    // Localiza o nome da categoria e atualiza o estado
     const buscarCategoria = data.categories.find((cat) => cat.id === categoriaId);
     if (buscarCategoria) {
       setCategoriaTitulo(buscarCategoria.title);
     }
-  }, [id]);
+  }, [id]); // Dependência: sempre que o `id` mudar, executa novamente
 
+  // Renderização do componente
   return (
     <View style={styles.container}>
+      {/* Exibe o nome da categoria como título */}
       <Text style={styles.cabecalhoTitulo}>{categoriaTitulo}</Text>
 
+      {/* Verifica se há produtos a exibir ou exibe mensagem de vazio */}
       {produtos.length === 0 ? (
         <Text style={styles.semResultado}>Nenhum produto encontrado.</Text>
       ) : (
         <FlatList
-          data={produtos}
-          keyExtractor={(item) => item.id.toString()}
-          renderItem={({ item }) => <ProdutoCard product={item} />}
-          contentContainerStyle={{ paddingBottom: 20 }}
+          data={produtos} // Lista de produtos da categoria
+          keyExtractor={(item) => item.id.toString()} // Chave única por produto
+          renderItem={({ item }) => <ProdutoCard product={item} />} // Renderiza cada produto com seu componente
+          contentContainerStyle={{ paddingBottom: 20 }} // Espaçamento inferior
         />
       )}
     </View>
   );
 }
 
+// Estilização dos elementos da tela
 const styles = StyleSheet.create({
   container: {
     flex: 1,

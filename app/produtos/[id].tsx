@@ -4,15 +4,25 @@ import { useEffect, useState } from 'react';
 import { data } from '../../data';
 import { Product } from '../../types/product';
 
+
+// Componente principal que exibe os detalhes de um produto selecionado
 export default function ProductDetail() {
+  // Captura o ID passado via rota (dinamicamente pela URL)
   const { id } = useLocalSearchParams();
+
+  // Estado que armazena o produto selecionado
   const [produto, setProduto] = useState<Product | null>(null);
 
+  // Busca o produto com base no ID fornecido
   useEffect(() => {
+    // Converte o ID da rota para número e encontra o produto correspondente
     const filtrar = data.products.find((item) => item.id === Number(id));
-    if (filtrar) setProduto(filtrar);
-  }, [id]);
 
+    // Se encontrar o produto, armazena no estado
+    if (filtrar) setProduto(filtrar);
+  }, [id]); // Executa o efeito sempre que o ID mudar
+
+  // Caso o produto ainda não tenha sido carregado, exibe mensagem de carregamento
   if (!produto) {
     return (
       <View style={styles.container}>
@@ -21,16 +31,25 @@ export default function ProductDetail() {
     );
   }
 
+  // Exibe os detalhes do produto dentro de um ScrollView
   return (
     <ScrollView contentContainerStyle={styles.container}>
+      {/* Imagem principal do produto */}
       <Image source={{ uri: produto.image }} style={styles.imagem} />
+
+      {/* Nome do produto */}
       <Text style={styles.titulo}>{produto.title}</Text>
+
+      {/* Preço formatado */}
       <Text style={styles.preco}>R$ {produto.price.toFixed(2)}</Text>
+
+      {/* Descrição completa do produto */}
       <Text style={styles.descricao}>{produto.description}</Text>
     </ScrollView>
   );
 }
 
+// Estilos visuais da tela de detalhes do produto
 const styles = StyleSheet.create({
   container: {
     padding: 16,
